@@ -12,12 +12,12 @@ class Movies extends Component {
   };
 
   render() {
-    if (!this.state.movies.length)
-      return <p>There are no movies in the database.</p>;
+    const { length } = this.state.movies;
+    if (!length) return <p>There are no movies in the database.</p>;
 
     return (
       <React.Fragment>
-        <p>Showing {this.state.movies.length} from database.</p>
+        <p>Showing {length} from database.</p>
         <table className="table table-bordered table-hover">
           <thead>
             <tr>
